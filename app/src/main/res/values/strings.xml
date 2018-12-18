@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">PickerApp</string>
+    <string name="spinner_date_picker_btn_text">Show Spinner Date Picker Dialog</string>
+    <string name="calendar_date_picker_btn_text">Show Calendar Date Picker Dialog</string>
+    <string name="spinner_time_picker_btn_text">Show Spinner Time Picker Dialog</string>
+    <string name="clock_time_picker_btn_text">Show Clock Time Picker Dialog</string>
+    <string name="preview_date">Date: Apr 29, 1992</string>
+    <string name="preview_time">Time: 12: 00</string>
+    <string name="date_picker_row_title">Date: %1$s</string>
+    <string name="time_picker_row_title">Time: %1$s</string>
+    <string name="date_format">MMM dd, yyyy</string>
+    <string name="time_format">HH: mm</string>
+</resources>
