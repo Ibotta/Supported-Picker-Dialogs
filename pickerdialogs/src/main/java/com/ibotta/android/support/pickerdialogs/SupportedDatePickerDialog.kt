@@ -1,10 +1,8 @@
 package com.ibotta.android.support.pickerdialogs
 
-import android.annotation.TargetApi
 import android.app.AlertDialog
 import android.content.Context
 import android.content.DialogInterface
-import android.os.Build
 import android.os.Bundle
 import android.support.annotation.StyleRes
 import android.util.TypedValue
@@ -73,10 +71,40 @@ class SupportedDatePickerDialog private constructor(
      */
     constructor(
         context: Context,
-        listener: OnDateSetListener?,
+        listener: OnDateSetListener,
         year: Int,
         month: Int,
-        dayOfMonth: Int) : this(context, 0, listener, null, year, month, dayOfMonth)
+        dayOfMonth: Int
+    ) : this(context, 0, listener, null, year, month, dayOfMonth)
+
+    /**
+     * Creates a new date picker dialog for the specified date using the parent
+     * context's default date picker dialog theme.
+     *
+     * @param context    the parent context
+     * @param listener   the listener to call when the user sets the date
+     * @param calendar   the calendar object used to populate the DatePicker
+     */
+    constructor(
+        context: Context,
+        listener: OnDateSetListener,
+        calendar: Calendar
+    ) : this(context, 0, listener, calendar)
+
+    /**
+     * Creates a new date picker dialog for the specified date using the parent
+     * context's default date picker dialog theme.
+     *
+     * @param context    the parent context
+     * @param listener   the listener to call when the user sets the date
+     * @param calendar   the calendar object used to populate the DatePicker
+     */
+    constructor(
+        context: Context,
+        @StyleRes themeResId: Int,
+        listener: OnDateSetListener,
+        calendar: Calendar
+    ) : this(context, themeResId, listener, calendar, 0, 0, 0)
 
     /**
      * Creates a new date picker dialog for the specified date.
@@ -95,10 +123,11 @@ class SupportedDatePickerDialog private constructor(
     constructor(
         context: Context,
         @StyleRes themeResId: Int,
-        listener: OnDateSetListener?,
+        listener: OnDateSetListener,
         year: Int,
         monthOfYear: Int,
-        dayOfMonth: Int) : this(context, themeResId, listener, null, year, monthOfYear, dayOfMonth)
+        dayOfMonth: Int
+    ) : this(context, themeResId, listener, null, year, monthOfYear, dayOfMonth)
 
     init {
         val themeContext = getContext()
