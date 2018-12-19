@@ -55,7 +55,7 @@ class SupportedDatePickerDialog private constructor(
      * `context`'s default alert dialog theme
      */
     constructor(context: Context, @StyleRes themeResId: Int)
-        : this(context, themeResId, null, Calendar.getInstance())
+        : this(context, themeResId, null, Calendar.getInstance(), -1, -1, -1)
 
     /**
      * Creates a new date picker dialog for the specified date using the parent
@@ -67,7 +67,7 @@ class SupportedDatePickerDialog private constructor(
      */
     constructor(
         context: Context,
-        listener: OnDateSetListener?,
+        listener: OnDateSetListener,
         calendar: Calendar
     ) : this(context, 0, listener, calendar)
 
@@ -82,7 +82,7 @@ class SupportedDatePickerDialog private constructor(
     constructor(
         context: Context,
         @StyleRes themeResId: Int,
-        listener: OnDateSetListener?,
+        listener: OnDateSetListener,
         calendar: Calendar
     ) : this(context, themeResId, listener, calendar, -1, -1, -1)
 
