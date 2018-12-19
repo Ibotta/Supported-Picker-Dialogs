@@ -34,7 +34,6 @@ class MainActivity : AppCompatActivity(), SupportedDatePickerDialog.OnDateSetLis
         // users to be able to send a entire Calendar object or the year, month, dayOfMonth. I always found it annoying that you only are
         // able send the three date values instead of the whole Calendar object.
         SupportedDatePickerDialog(this, this, currentDate).show()
-
     }
 
     override fun onDateSet(view: DatePicker, year: Int, month: Int, dayOfMonth: Int) {
