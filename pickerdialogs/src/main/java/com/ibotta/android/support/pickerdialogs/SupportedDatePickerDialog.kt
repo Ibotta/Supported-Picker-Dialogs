@@ -1,8 +1,10 @@
 package com.ibotta.android.support.pickerdialogs
 
+import android.annotation.TargetApi
 import android.app.AlertDialog
 import android.content.Context
 import android.content.DialogInterface
+import android.os.Build
 import android.os.Bundle
 import android.support.annotation.StyleRes
 import android.util.TypedValue
@@ -22,7 +24,7 @@ import java.util.Calendar
 class SupportedDatePickerDialog private constructor(
     context: Context,
     @StyleRes themeResId: Int,
-    private var dateSetListener: OnDateSetListener?,
+    private val dateSetListener: OnDateSetListener?,
     calendar: Calendar?,
     private var year: Int,
     private var monthOfYear: Int,
@@ -223,7 +225,7 @@ class SupportedDatePickerDialog private constructor(
         private const val MONTH = "month"
         private const val DAY = "day"
 
-        @StyleRes
+        @StyleRes @TargetApi(Build.VERSION_CODES.LOLLIPOP)
         private fun resolveDialogTheme(context: Context, @StyleRes themeResId: Int): Int = when ((themeResId == 0)) {
             true -> {
                 val outValue = TypedValue()
