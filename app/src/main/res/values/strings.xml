@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PickerApp</string>
+    <string name="spinner_date_picker_btn_text">Show Spinner Date Dialog Picker!</string>
+    <string name="calendar_date_picker_btn_text">Show Calendar Date Dialog Picker!</string>
+    <string name="spinner_time_picker_btn_text">Show Spinner Time Dialog Picker!</string>
+    <string name="calendar_time_picker_btn_text">Show Calendar Time Dialog Picker!</string>
+</resources>
