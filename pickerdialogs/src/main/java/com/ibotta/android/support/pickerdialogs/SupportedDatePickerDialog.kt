@@ -44,7 +44,7 @@ class SupportedDatePickerDialog private constructor(
      *
      * @param context the parent context
      */
-    constructor(context: Context) : this(context, 0, null, Calendar.getInstance(), -1, -1, -1)
+    constructor(context: Context) : this(context, 0)
 
     /**
      * Creates a new date picker dialog for the current date.
@@ -55,7 +55,37 @@ class SupportedDatePickerDialog private constructor(
      * `context`'s default alert dialog theme
      */
     constructor(context: Context, @StyleRes themeResId: Int)
-        : this(context, themeResId, null, Calendar.getInstance(), -1, -1, -1)
+        : this(context, themeResId, null, Calendar.getInstance())
+
+    /**
+     * Creates a new date picker dialog for the specified date using the parent
+     * context's default date picker dialog theme.
+     *
+     * @param context    the parent context
+     * @param listener   the listener to call when the user sets the date
+     * @param calendar   the calendar object used to populate the DatePicker
+     */
+    constructor(
+        context: Context,
+        listener: OnDateSetListener?,
+        calendar: Calendar
+    ) : this(context, 0, listener, calendar)
+
+    /**
+     * Creates a new date picker dialog for the specified date using the parent
+     * context's default date picker dialog theme.
+     *
+     * @param context    the parent context
+     * @param listener   the listener to call when the user sets the date
+     * @param calendar   the calendar object used to populate the DatePicker
+     */
+    constructor(
+        context: Context,
+        @StyleRes themeResId: Int,
+        listener: OnDateSetListener?,
+        calendar: Calendar
+    ) : this(context, themeResId, listener, calendar, -1, -1, -1)
+
 
     /**
      * Creates a new date picker dialog for the specified date using the parent
@@ -75,36 +105,7 @@ class SupportedDatePickerDialog private constructor(
         year: Int,
         month: Int,
         dayOfMonth: Int
-    ) : this(context, 0, listener, null, year, month, dayOfMonth)
-
-    /**
-     * Creates a new date picker dialog for the specified date using the parent
-     * context's default date picker dialog theme.
-     *
-     * @param context    the parent context
-     * @param listener   the listener to call when the user sets the date
-     * @param calendar   the calendar object used to populate the DatePicker
-     */
-    constructor(
-        context: Context,
-        listener: OnDateSetListener,
-        calendar: Calendar
-    ) : this(context, 0, listener, calendar)
-
-    /**
-     * Creates a new date picker dialog for the specified date using the parent
-     * context's default date picker dialog theme.
-     *
-     * @param context    the parent context
-     * @param listener   the listener to call when the user sets the date
-     * @param calendar   the calendar object used to populate the DatePicker
-     */
-    constructor(
-        context: Context,
-        @StyleRes themeResId: Int,
-        listener: OnDateSetListener,
-        calendar: Calendar
-    ) : this(context, themeResId, listener, calendar, 0, 0, 0)
+    ) : this(context, 0, listener, year, month, dayOfMonth)
 
     /**
      * Creates a new date picker dialog for the specified date.
