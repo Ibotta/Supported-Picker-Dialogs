@@ -229,7 +229,7 @@ class SupportedDatePickerDialog private constructor(
         private fun resolveDialogTheme(context: Context, @StyleRes themeResId: Int): Int = when ((themeResId == 0)) {
             true -> {
                 val outValue = TypedValue()
-                // This attribute requires API 21 so it will not be found leaving the out.resourceId = 0 which make so the view receives no dialog theme
+                // android.R.attr.datePickerDialogTheme was added in API 21, so the outValue.resourceId will be 0, and the view will receive no dialog theme
                 context.theme.resolveAttribute(android.R.attr.datePickerDialogTheme, outValue, true)
                 outValue.resourceId
             }
