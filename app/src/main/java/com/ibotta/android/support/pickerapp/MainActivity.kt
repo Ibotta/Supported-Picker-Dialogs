@@ -44,7 +44,6 @@ class MainActivity : AppCompatActivity(), SupportedDatePickerDialog.OnDateSetLis
         if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.LOLLIPOP) {
             // For below API 21 the default date picker is a spinner and to update the date picker to be a calendar you
             // have to do it this way. Otherwise for above API 21 the default is the Material Design calendar date picker.
-            // Thanks for switching it up on us Google!
             supportedDatePickerDialog.datePicker.calendarViewShown = true
             supportedDatePickerDialog.datePicker.spinnersShown = false
         }
