@@ -8,6 +8,12 @@ import kotlinx.android.synthetic.main.activity_main.*
 import java.text.SimpleDateFormat
 import java.util.*
 
+/**
+ * The purpose of this class is show off the SupportedDatePickerDialog's functionality. This implementation shows off
+ * the SupportedDatePickerDialog being displayed in the spinner and calendar fashion.
+ *
+ * Created by Lucas Newcomer 12/19/18
+ */
 class MainActivity : AppCompatActivity(), SupportedDatePickerDialog.OnDateSetListener {
     private var currentDate = Calendar.getInstance()
 
@@ -30,10 +36,20 @@ class MainActivity : AppCompatActivity(), SupportedDatePickerDialog.OnDateSetLis
     }
 
     private fun showCalendarDatePickerDialog() {
-        // I added two more constructors to the SupportDatePickerDialog that is not par of the normal DatePickerDialog. This just allows
-        // users to be able to send a entire Calendar object or the year, month, dayOfMonth. I always found it annoying that you only are
-        // able send the three date values instead of the whole Calendar object.
-        SupportedDatePickerDialog(this, this, currentDate).show()
+        // I added two more constructors to the SupportDatePickerDialog that is not part of the normal DatePickerDialog. This just allows
+        // you to send an entire Calendar object. I always found it annoying that you only are able send the three date values
+        // instead of the whole Calendar object.
+        val supportedDatePickerDialog = SupportedDatePickerDialog(this, this, currentDate)
+
+        if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.LOLLIPOP) {
+            // For below API 21 the default date picker is a spinner and to update the date picker to be a calendar you
+            // have to do it this way. Otherwise for above API 21 the default is the Material Design calendar date picker.
+            // Thanks for switching it up on us Google!
+            supportedDatePickerDialog.datePicker.calendarViewShown = true
+            supportedDatePickerDialog.datePicker.spinnersShown = false
+        }
+
+        supportedDatePickerDialog.show()
     }
 
     override fun onDateSet(view: DatePicker, year: Int, month: Int, dayOfMonth: Int) {

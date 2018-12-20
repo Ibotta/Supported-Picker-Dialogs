@@ -24,7 +24,7 @@ import java.util.Calendar
 class SupportedDatePickerDialog private constructor(
     context: Context,
     @StyleRes themeResId: Int,
-    private val dateSetListener: OnDateSetListener?,
+    private var dateSetListener: OnDateSetListener?,
     calendar: Calendar?,
     private var year: Int,
     private var monthOfYear: Int,
@@ -229,6 +229,7 @@ class SupportedDatePickerDialog private constructor(
         private fun resolveDialogTheme(context: Context, @StyleRes themeResId: Int): Int = when ((themeResId == 0)) {
             true -> {
                 val outValue = TypedValue()
+                // This attribute requires API 21 so it will not be found leaving the out.resourceId = 0 which make so the view receives no dialog theme
                 context.theme.resolveAttribute(android.R.attr.datePickerDialogTheme, outValue, true)
                 outValue.resourceId
             }
