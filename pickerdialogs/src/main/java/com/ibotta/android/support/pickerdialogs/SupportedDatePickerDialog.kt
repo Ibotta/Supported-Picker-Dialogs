@@ -137,19 +137,16 @@ class SupportedDatePickerDialog private constructor(
         val inflater = LayoutInflater.from(themeContext)
 
         datePicker = inflater.inflate(R.layout.view_date_picker, null) as DatePicker
-
-        setView(datePicker)
-
-        setButton(DialogInterface.BUTTON_POSITIVE, themeContext.getString(android.R.string.ok), this)
-        setButton(DialogInterface.BUTTON_NEGATIVE, themeContext.getString(android.R.string.cancel), this)
-
         calendar?.let {
             year = it.get(Calendar.YEAR)
             monthOfYear = it.get(Calendar.MONTH)
             dayOfMonth = it.get(Calendar.DAY_OF_MONTH)
         }
-
         datePicker.init(year, monthOfYear, dayOfMonth, this)
+        setView(datePicker)
+
+        setButton(DialogInterface.BUTTON_POSITIVE, themeContext.getString(android.R.string.ok), this)
+        setButton(DialogInterface.BUTTON_NEGATIVE, themeContext.getString(android.R.string.cancel), this)
     }
 
     override fun onDateChanged(view: DatePicker, year: Int, month: Int, dayOfMonth: Int) {
