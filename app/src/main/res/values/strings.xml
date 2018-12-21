@@ -7,5 +7,5 @@
     <string name="date_picker_row_title">Date: %1$s</string>
     <string name="time_picker_row_title">Time: %1$s</string>
     <string name="date_format">MMM dd, yyyy</string>
-    <string name="time_format">hh: mm</string>
+    <string name="time_format">HH: mm</string>
 </resources>
