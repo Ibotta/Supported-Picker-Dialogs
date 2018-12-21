@@ -11,12 +11,14 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 /**
- * The purpose of this class is show off the SupportedDatePickerDialog and SupportedTimePickerDialog's functionality. This implementation shows off
- * both picker dialogs being displayed in their different modes.
+ * The purpose of this class is show off the SupportedDatePickerDialog and SupportedTimePickerDialog's functionality.
+ * This implementation shows off both picker dialogs being displayed in their different modes.
  *
  * Created by Lucas Newcomer 12/19/18
  */
-class MainActivity : AppCompatActivity(), SupportedDatePickerDialog.OnDateSetListener, SupportedTimePickerDialog.OnTimeSetListener {
+class MainActivity : AppCompatActivity(), SupportedDatePickerDialog.OnDateSetListener,
+        SupportedTimePickerDialog.OnTimeSetListener {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
