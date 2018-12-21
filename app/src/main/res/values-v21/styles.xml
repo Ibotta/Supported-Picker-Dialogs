@@ -8,4 +8,13 @@
     <style name="DatePickerStyle" parent="@android:style/Widget.Material.Light.DatePicker">
         <item name="android:datePickerMode">spinner</item>
     </style>
+
+    <style name="SpinnerTimePickerDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <!-- android:timePickerStyle was not added until API 21 -->
+        <item name="android:timePickerStyle">@style/TimePickerStyle</item>
+    </style>
+
+    <style name="TimePickerStyle" parent="@android:style/Widget.Material.Light.TimePicker">
+        <item name="android:timePickerMode">spinner</item>
+    </style>
 </resources>
