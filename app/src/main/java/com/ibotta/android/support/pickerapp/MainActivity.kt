@@ -11,8 +11,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 /**
- * The purpose of this class is show off the SupportedDatePickerDialog and SupportedTimePickerDialog's functionality.
- * This implementation shows off both picker dialogs being displayed in their different modes.
+ * The purpose of this class is to show off the SupportedDatePickerDialog and SupportedTimePickerDialog in various modes.
  *
  * Created by Lucas Newcomer 12/19/18
  */
