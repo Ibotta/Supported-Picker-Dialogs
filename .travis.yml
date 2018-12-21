@@ -1,0 +1,6 @@
+# We use Travis CI for our open-source projects.
+# You should use this to:
+#  - run your tests
+#  - publish any artifacts
+# More info is available here:
+# https://docs.travis-ci.com/user/customizing-the-build/
