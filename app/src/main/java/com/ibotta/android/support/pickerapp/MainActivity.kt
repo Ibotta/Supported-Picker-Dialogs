@@ -47,6 +47,8 @@ class MainActivity : AppCompatActivity(), SupportedDatePickerDialog.OnDateSetLis
         SupportedDatePickerDialog(this, R.style.SpinnerDatePickerDialogTheme, this, year, month, dayOfMonth).show()
     }
 
+    private fun test(foo1: String, foo2: String, foo3: String, foo4: String, foo5: String, foo6: String) {}
+
     private fun showCalendarDatePickerDialog() {
         // I added two more constructors to the SupportDatePickerDialog that is not part of the normal DatePickerDialog. This just allows
         // you to send an entire Calendar object. I always found it annoying that you only are able send the three date values
