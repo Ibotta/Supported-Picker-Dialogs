@@ -32,7 +32,7 @@ Fear not though! This library adds a SupportedDatePickerDialog and SupportedTime
 of any DatePickerDialog or TimePickerDialog and will continue to have the same functionality that these Android platform library's picker dialogs have.
 
 ## Development
-SupportedDatePickerDialog style:
+SupportedDatePickerDialog style example:
 ```
 <style name="SpinnerDatePickerDialogTheme" parent="Theme.AppCompat.Light.Dialog">
     <!-- android:datePickerStyle was not added until API 21 -->
@@ -43,7 +43,7 @@ SupportedDatePickerDialog style:
     <item name="android:datePickerMode">spinner</item>
 </style>
 ```
-SupportedDatePickerDialog code:
+SupportedDatePickerDialog code example:
 ```
 var currentDate = Calendar.getInstance()
 val year = currentDate.get(Calendar.YEAR)
@@ -52,7 +52,7 @@ val dayOfMonth = currentDate.get(Calendar.DAY_OF_MONTH)
 SupportedDatePickerDialog(this, R.style.SpinnerDatePickerDialogTheme, this, year, month, dayOfMonth).show()
 ```
 
-SupportedTimePickerDialog style:
+SupportedTimePickerDialog style example:
 ```
 <style name="SpinnerTimePickerDialogTheme" parent="Theme.AppCompat.Light.Dialog">
     <!-- android:timePickerStyle was not added until API 21 -->
@@ -63,7 +63,7 @@ SupportedTimePickerDialog style:
     <item name="android:timePickerMode">spinner</item>
 </style>
 ```
-SupportedTimePickerDialog code:
+SupportedTimePickerDialog code example:
 ```
 var currentDate = Calendar.getInstance()
 val month = currentDate.get(Calendar.MONTH)
