@@ -2,7 +2,9 @@ package com.ibotta.android.support.pickerapp
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.annotation.StyleRes
 import android.widget.DatePicker
+import android.widget.TextView
 import android.widget.TimePicker
 import com.ibotta.android.support.pickerapp.R.id.*
 import com.ibotta.android.support.pickerdialogs.SupportedDatePickerDialog
@@ -102,15 +104,17 @@ class MainActivity : AppCompatActivity(), SupportedDatePickerDialog.OnDateSetLis
     }
 
     private fun setDate() {
-        val formatter = SimpleDateFormat(getString(R.string.date_format), Locale.getDefault())
-        val date = getString(R.string.date_picker_row_title, formatter.format(currentDate.time))
-        dateDisplay.text = date
+        setDateOrTime(R.string.date_format, R.string.date_picker_row_title, dateDisplay)
     }
 
     private fun setTime() {
-        val formatter = SimpleDateFormat(getString(R.string.time_format), Locale.getDefault())
-        val time = getString(R.string.time_picker_row_title, formatter.format(currentDate.time))
-        timeDisplay.text = time
+        setDateOrTime(R.string.time_format, R.string.time_picker_row_title, timeDisplay)
+    }
+
+    private fun setDateOrTime(datePatternRes: Int, formatRes: Int, view: TextView) {
+        val formatter = SimpleDateFormat(getString(datePatternRes), Locale.getDefault())
+        val time = getString(formatRes, formatter.format(currentDate.time))
+        view.text = time
     }
 
     override fun onSaveInstanceState(outState: Bundle?) {
