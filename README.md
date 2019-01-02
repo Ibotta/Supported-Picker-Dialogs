@@ -1,8 +1,7 @@
 # Supported-Picker-Dialogs
 
 ![Travis CI Badge](https://travis-ci.com/Ibotta/Supported-Picker-Dialogs.svg?token=a1Fz6AJc1ZbpXy1CH2gh&branch=master)
-
-<!-- Add CodeClimate Badge https://docs.codeclimate.com/docs/overview#badges -->
+![Code Climate Maintainability](https://api.codeclimate.com/v1/badges/f844ae8a288c5810826c/maintainability)
 
 ## Installation
 Step 1: Add jitpack.io repository to your root build.gradle
@@ -77,3 +76,9 @@ SupportedTimePickerDialog(
     mIs24HourView = true)
     .show()
 ```
+
+SupportedDatePickerDialog:
+![Supported Date Picker Dialog](DatePickerDialog.gif)
+
+SupportedTimePickerDialog:
+![Supported Time Picker Dialog](TimePickerDialog.gif)
