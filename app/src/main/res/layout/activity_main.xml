@@ -37,11 +37,11 @@
         tools:text="@string/preview_date"/>
 
     <Button
-        android:id="@+id/calendarTimePickerBtn"
+        android:id="@+id/clockTimePickerBtn"
         android:layout_width="@dimen/zero"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin"
-        android:text="@string/calendar_date_picker_btn_text"
+        android:text="@string/clock_time_picker_btn_text"
         app:layout_constraintTop_toBottomOf="@id/dateDisplay"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
@@ -51,10 +51,10 @@
         android:layout_width="@dimen/zero"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin"
-        android:text="@string/spinner_date_picker_btn_text"
+        android:text="@string/spinner_time_picker_btn_text"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/calendarTimePickerBtn"/>
+        app:layout_constraintTop_toBottomOf="@id/clockTimePickerBtn"/>
 
     <TextView
         android:id="@+id/timeDisplay"

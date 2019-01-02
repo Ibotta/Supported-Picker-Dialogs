@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity(), SupportedDatePickerDialog.OnDateSetLis
         spinnerDatePickerBtn.setOnClickListener { showSpinnerDatePickerDialog() }
         calendarDatePickerBtn.setOnClickListener { showCalendarDatePickerDialog() }
         spinnerTimePickerBtn.setOnClickListener { showSpinnerTimePickerDialog() }
-        calendarTimePickerBtn.setOnClickListener { showClockTimePickerDialog() }
+        clockTimePickerBtn.setOnClickListener { showClockTimePickerDialog() }
     }
 
     private fun loadState(savedInstanceState: Bundle?) {
@@ -62,14 +62,14 @@ class MainActivity : AppCompatActivity(), SupportedDatePickerDialog.OnDateSetLis
     }
 
     private fun showSpinnerTimePickerDialog() {
-        val month = currentDate.get(Calendar.MONTH)
-        val dayOfMonth = currentDate.get(Calendar.DAY_OF_MONTH)
+        val hour = currentDate.get(Calendar.HOUR_OF_DAY)
+        val minute = currentDate.get(Calendar.MINUTE)
         SupportedTimePickerDialog(
             context = this,
             themeResId =  R.style.SpinnerTimePickerDialogTheme,
             timeSetListener = this,
-            mInitialHourOfDay = month,
-            mInitialMinute = dayOfMonth,
+            mInitialHourOfDay = hour,
+            mInitialMinute = minute,
             mIs24HourView = true)
             .show()
     }
@@ -84,9 +84,9 @@ class MainActivity : AppCompatActivity(), SupportedDatePickerDialog.OnDateSetLis
             timeSetListener = this,
             mInitialHourOfDay = hour,
             mInitialMinute = minute,
-            mIs24HourView = true).show()
+            mIs24HourView = true)
+            .show()
     }
-
 
     override fun onDateSet(view: DatePicker, year: Int, month: Int, dayOfMonth: Int) {
         currentDate.set(Calendar.YEAR, year)
