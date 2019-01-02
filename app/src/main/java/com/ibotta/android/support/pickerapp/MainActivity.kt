@@ -2,11 +2,9 @@ package com.ibotta.android.support.pickerapp
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.annotation.StyleRes
 import android.widget.DatePicker
 import android.widget.TextView
 import android.widget.TimePicker
-import com.ibotta.android.support.pickerapp.R.id.*
 import com.ibotta.android.support.pickerdialogs.SupportedDatePickerDialog
 import com.ibotta.android.support.pickerdialogs.SupportedTimePickerDialog
 import kotlinx.android.synthetic.main.activity_main.*

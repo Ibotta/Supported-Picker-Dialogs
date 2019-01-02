@@ -24,12 +24,12 @@ dependencies {
 ## Usage
 An Android DatePicker and TimePickerDialog that works correctly across OS versions.
 
-The main reason for this library is to fix an issue with the spinner datepickermode and timepickermode style attributes in themes not being applied to
-the DatePickerDialog and TimePickerDialog on devices running Android 7.0. Google's response to this issue is that they wont
-fix it due to it being obsolete via these tracked issues: https://issuetracker.google.com/issues/37120178, https://issuetracker.google.com/issues/37119315.
-Its a strange issue that with how the Android platform library handles the style attribute for the picker views, but fear not!
-This library adds a SupportedDatePickerDialog and SupportedTimePickerDialog to your project to be used in place of any DatePickerDialog or TimePickerDialog
-to fix the issue! Also these supported dialogs continue to still have all the functionality that the Android platform library's picker dialogs have.
+The main reason for this library is to fix an issue with the spinner datepickermode and timepickermode style attributes not being applied to
+the DatePickerDialog and TimePickerDialog on devices running Android 7.0. Google responded that they wont fix the issue for 7.0 through these tracked
+issues: https://issuetracker.google.com/issues/37120178, https://issuetracker.google.com/issues/37119315.
+It's a pretty strange issue with how the Android platform library handles these style attributes for the picker views.
+Fear not though! This library adds a SupportedDatePickerDialog and SupportedTimePickerDialog to your project to fix the issue. These classes can be used in place
+of any DatePickerDialog or TimePickerDialog and will continue to have the same functionality that these Android platform library's picker dialogs have.
 
 ## Development
 SupportedDatePickerDialog style:
