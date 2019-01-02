@@ -1,6 +1,7 @@
 # Supported-Picker-Dialogs
 
 ![Travis CI Badge](https://travis-ci.com/Ibotta/Supported-Picker-Dialogs.svg?token=a1Fz6AJc1ZbpXy1CH2gh&branch=master)
+
 ![Code Climate Maintainability](https://api.codeclimate.com/v1/badges/f844ae8a288c5810826c/maintainability)
 
 ## Installation
