@@ -45,7 +45,7 @@ SupportedDatePickerDialog style example:
 ```
 SupportedDatePickerDialog code example:
 ```
-var currentDate = Calendar.getInstance()
+val currentDate = Calendar.getInstance()
 val year = currentDate.get(Calendar.YEAR)
 val month = currentDate.get(Calendar.MONTH)
 val dayOfMonth = currentDate.get(Calendar.DAY_OF_MONTH)
@@ -65,7 +65,7 @@ SupportedTimePickerDialog style example:
 ```
 SupportedTimePickerDialog code example:
 ```
-var currentDate = Calendar.getInstance()
+val currentDate = Calendar.getInstance()
 val month = currentDate.get(Calendar.MONTH)
 val dayOfMonth = currentDate.get(Calendar.DAY_OF_MONTH)
 SupportedTimePickerDialog(
