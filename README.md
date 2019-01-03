@@ -79,7 +79,7 @@ SupportedTimePickerDialog(
 ```
 
 SupportedDatePickerDialog on Android 7.0 (API 21):
-![Supported Date Picker Dialog](DatePickerDialog.gif)
+![Supported Date Picker Dialog](SupportedDatePickerDialog.gif)
 
 SupportedTimePickerDialog on Android 7.0 (API 21):
-![Supported Time Picker Dialog](TimePickerDialog.gif)
+![Supported Time Picker Dialog](SupportedTimePickerDialog.gif)
