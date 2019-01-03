@@ -22,7 +22,7 @@ dependencies {
 ```
 
 ## Usage
-An Android DatePicker and TimePickerDialog that works correctly across OS versions.
+An Android DatePickerDialog and TimePickerDialog that works correctly across OS versions.
 
 The main reason for this library is to fix an issue with the spinner datepickermode and timepickermode style attributes not being applied to
 the DatePickerDialog and TimePickerDialog on devices running Android 7.0. Google responded that they wont fix the issue for 7.0 through these tracked
