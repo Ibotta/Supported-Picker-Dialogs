@@ -14,12 +14,27 @@ import android.widget.DatePicker
 import java.util.Calendar
 
 /**
- * The purpose of this class is to support all types of date picker dialogs for all types of Android versions. The reason
- * that this class was created is because spinner date pickers are not working for Android 7.0 (API 24) ref: https://issuetracker.google.com/issues/37120178.
+ * The purpose of this class is to support all types of date picker dialogs on API 14+. This class was created to fix
+ * an issue with the spinner datepickermode not working on Android 7.0 (API 24) ref: https://issuetracker.google.com/issues/37120178.
  * This class is almost identical to the DatePickerDialog, which is part of the Android Platform Library, except for some library specific
- * logic in the class and DatePicker's xml. For instance the attribute dialogMode="true" is not something that can be used on a normal DatePicker in xml.
+ * logic in the class and the DatePicker. For instance the attribute dialogMode="true" is not something that can be used on a normal DatePicker.
  *
- * Created by Lucas Newcomer 12/17/18
+ * Android Open Source Project Reference: https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/app/DatePickerDialog.java
+ *
+ * Copyright (C) 2007 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
  */
 class SupportedDatePickerDialog private constructor(
     context: Context,

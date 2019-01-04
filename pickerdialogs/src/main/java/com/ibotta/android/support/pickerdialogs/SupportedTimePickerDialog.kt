@@ -11,12 +11,27 @@ import android.view.LayoutInflater
 import android.widget.TimePicker
 
 /**
- * The purpose of this class is to support all types of time picker dialogs for all types of Android versions. The reason
- * that this class was created is because spinner time pickers are not working for Android 7.0 (API 24) ref: https://issuetracker.google.com/issues/37119315.
+ * The purpose of this class is to support all types of time picker dialogs on API 14+. This class was created to fix
+ * an issue with the spinner timepickermode not working on Android 7.0 (API 24) ref: https://issuetracker.google.com/issues/37119315.
  * This class is almost identical to the TimePickerDialog, which is part of the Android Platform Library, except for some library specific
- * logic in the class and TimePickers's xml. For instance .
+ * logic in the class and the TimePicker. For instance the attribute dialogMode="true" is not something that can be used on a normal TimePicker.
  *
- * Created by Lucas Newcomer 12/17/18
+ * Android Open Source Project Reference: https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/app/TimePickerDialog.java
+ *
+ * Copyright (C) 2007 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
  */
 class SupportedTimePickerDialog @JvmOverloads constructor(
     context: Context,
