@@ -21,7 +21,7 @@ import java.util.Calendar
  *
  * Android Open Source Project Reference: https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/app/DatePickerDialog.java
  *
- * Copyright (C) 2007 The Android Open Source Project
+ * Copyright (C) 2019 Ibotta
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
