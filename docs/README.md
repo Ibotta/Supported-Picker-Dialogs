@@ -6,7 +6,7 @@
 
 ## Installation
 Step 1: Add jitpack.io repository to your root build.gradle
-```
+```java
 allprojects {
  repositories {
     jcenter()
@@ -15,7 +15,7 @@ allprojects {
 }
 ```
 Step 2. Add this dependency
-```
+```java
 dependencies {
     implementation 'com.github.Ibotta:supported-picker-dialogs:1.0'
 }
@@ -33,7 +33,7 @@ of any DatePickerDialog or TimePickerDialog and will continue to have the same f
 
 ## Development
 SupportedDatePickerDialog style example:
-```
+```java
 <style name="SpinnerDatePickerDialogTheme" parent="Theme.AppCompat.Light.Dialog">
     <!-- android:datePickerStyle was not added until API 21 -->
     <item name="android:datePickerStyle">@style/DatePickerStyle</item>
@@ -44,7 +44,7 @@ SupportedDatePickerDialog style example:
 </style>
 ```
 SupportedDatePickerDialog code example:
-```
+```kotlin
 val currentDate = Calendar.getInstance()
 val year = currentDate.get(Calendar.YEAR)
 val month = currentDate.get(Calendar.MONTH)
@@ -53,7 +53,7 @@ SupportedDatePickerDialog(this, R.style.SpinnerDatePickerDialogTheme, this, year
 ```
 
 SupportedTimePickerDialog style example:
-```
+```java
 <style name="SpinnerTimePickerDialogTheme" parent="Theme.AppCompat.Light.Dialog">
     <!-- android:timePickerStyle was not added until API 21 -->
     <item name="android:timePickerStyle">@style/TimePickerStyle</item>
@@ -64,7 +64,7 @@ SupportedTimePickerDialog style example:
 </style>
 ```
 SupportedTimePickerDialog code example:
-```
+```kotlin
 val currentDate = Calendar.getInstance()
 val month = currentDate.get(Calendar.MONTH)
 val dayOfMonth = currentDate.get(Calendar.DAY_OF_MONTH)
