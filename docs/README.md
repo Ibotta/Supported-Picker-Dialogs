@@ -4,6 +4,8 @@
 
 ![Code Climate Maintainability](https://api.codeclimate.com/v1/badges/6e38eba221c06f300681/maintainability)
 
+[![Jitpack.io Badge](https://jitpack.io/v/Ibotta/Supported-Picker-Dialogs.svg)](https://jitpack.io/#Ibotta/Supported-Picker-Dialogs)
+
 ## Installation
 Step 1: Add jitpack.io repository to your root build.gradle
 ```java
@@ -30,6 +32,9 @@ issues: https://issuetracker.google.com/issues/37120178, https://issuetracker.go
 It's a pretty strange issue with how the Android platform library handles these style attributes for the picker views.
 Fear not though! This library adds a SupportedDatePickerDialog and SupportedTimePickerDialog to your project to fix the issue. These classes can be used in place
 of any DatePickerDialog or TimePickerDialog and will continue to have the same functionality that these Android platform library's picker dialogs have.
+
+## Background
+If you would like to know how I got to my solution, check out my blog post on Medium! https://medium.com/building-ibotta/spinner-picker-dialogs-on-android-7-0-we-fixed-them-4dcda0f6102b
 
 ## Development
 SupportedDatePickerDialog style example:
