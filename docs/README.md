@@ -1,4 +1,5 @@
-# Supported-Picker-Dialogs
+#Supported-Picker-Dialogs - 🛑 DEPRECATED 🛑 
+This project repo is no longer being maintained.
 
 ![Travis CI Badge](https://travis-ci.com/Ibotta/Supported-Picker-Dialogs.svg?token=a1Fz6AJc1ZbpXy1CH2gh&branch=master)
 
