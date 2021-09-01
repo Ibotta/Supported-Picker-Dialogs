@@ -16,4 +16,4 @@ All notable changes to this project will be documented in this file.
 
 ## [1.0.2] - 2021-08-25
 ### Changed
-- README.MD to show depracted status of this project. At Ibotta we no longer need this repository because our minimum app version is higher than what this project solves
+- README.MD to show deprecated status of this project. At Ibotta we no longer need this repository because our minimum app version is higher than what this project solves
